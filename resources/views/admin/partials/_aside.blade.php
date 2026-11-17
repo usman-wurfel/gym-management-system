@@ -36,7 +36,7 @@
         @endphp
         <!--begin::Logo-->
         <a href="{{ route('admin.dashboard') }}" class="brand-logo">
-            <img alt="Logo" width="150" src="{{ asset($logo) }}"/>
+            <img alt="Logo" src="{{ asset($logo) }}" style="max-height:48px;width:auto;height:auto;background:transparent;"/>
         </a>
 
         <!--end::Logo-->
