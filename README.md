@@ -1,6 +1,6 @@
 # Gym Management System
 
-Multi-tenant **gym / fitness membership platform** on Laravel — member lifecycle, packages, payments, staff roles, reports, and subscription billing for gym businesses. Built to run day-to-day ops for gyms managing **more than 1,600 users** in the system.
+Multi-tenant **gym / fitness membership platform** on Laravel — member lifecycle, packages, payments, staff roles, reports, and subscription billing for gym businesses. Built to run day-to-day ops for gyms managing **more than 1,600 users** and **16,919 payments** in the system.
 
 ---
 
@@ -26,11 +26,10 @@ Gyms outgrow spreadsheets fast: renewals slip, front-desk staff need limited acc
 |--|--|
 | Dashboard (1,500+ members) | ![Dashboard](docs/screenshots/01-dashboard.png) |
 | Members | ![Members](docs/screenshots/02-members.png) |
-| Payments | ![Payments](docs/screenshots/03-payments.png) |
+| Payments (16,919 records) | ![Payments](docs/screenshots/03-payments.png) |
 | Pending payments | ![Pending payments](docs/screenshots/04-pending-payments.png) |
 | Packages | ![Packages](docs/screenshots/05-packages.png) |
 | Reports | ![Reports](docs/screenshots/06-reports.png) |
-| Users / team | ![Users](docs/screenshots/07-users.png) |
 | Roles & permissions | ![Roles](docs/screenshots/08-roles.png) |
 
 ---
@@ -39,7 +38,8 @@ Gyms outgrow spreadsheets fast: renewals slip, front-desk staff need limited acc
 
 Production-style dataset exercised in this build:
 
-- **More than 1,600 users** represented across members + staff accounts in the system
+- **More than 1,600 users** across members + staff accounts
+- **16,919 payments** tracked (paid + pending)
 - Single gym owner view with **~1,500+ active members** on the dashboard
 - Bulk member import, search/filter DataTables, and package assignment at scale
 
@@ -95,10 +95,6 @@ php artisan key:generate
 php artisan migrate --seed
 php artisan serve
 ```
-
-Admin UI: `http://127.0.0.1:8000/admin/dashboard` (after login).
-
-> Seed passwords are for **local demo only** — change them before any shared environment.
 
 ---
 
